@@ -1,0 +1,37 @@
+# Dossiers générés par l'environnement de développement
+node_modules/
+dist/
+
+# Fichiers de configuration spécifiques à l'environnement
+.env
+
+# Fichiers de sauvegarde et fichiers temporaires
+*.bak
+*.tmp
+
+# Fichiers de logs
+*.log
+
+# Fichiers de dépendances spécifiques à certains éditeurs
+.vscode/
+.idea/
+
+# Fichiers de build
+build/
+out/
+
+# Fichiers de cache
+.cache/
+
+# Fichiers de sauvegarde de l'éditeur
+*.swp
+*.swo
+
+# Fichiers de sauvegarde de l'IDE
+*.bak
+*.backup
+*.old
+
+# Fichiers de sauvegarde de l'OS
+.DS_Store
+Thumbs.db
