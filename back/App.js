@@ -11,7 +11,6 @@ const app = express();
 app.use(express.json());
 
 const mongoUrl = process.env.MONGODB_URI;
-console.log("ici", mongoUrl);
 
 mongoose.connect(mongoUrl)
     .then(() => console.log('MongoDB connected'))
