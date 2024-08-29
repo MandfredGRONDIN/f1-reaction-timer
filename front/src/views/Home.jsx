@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Home.css';
 
 function Home() {
     return (
-        <div>
+        <div className="home-container">
             <h1>Welcome to the Reaction Timer App</h1>
             <p>Track your reaction times and improve your performance!</p>
             <nav>

@@ -1,0 +1,30 @@
+/* Conteneur principal du composant ReactionTimerPage */
+.reaction-timer-page-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Style pour le titre */
+  .reaction-timer-page-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style pour le bouton de retour */
+  .reaction-timer-page-container .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reaction-timer-page-container .back-button:hover {
+    background-color: #0056b3;
+  }
+  

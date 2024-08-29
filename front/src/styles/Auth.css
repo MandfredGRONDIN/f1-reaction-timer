@@ -1,0 +1,77 @@
+/* Conteneur principal pour les pages de connexion et d'inscription */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    height: 100vh; 
+    background-color: #f5f5f5; 
+  }
+  
+  /* Style pour les titres */
+  .auth-container h2 {
+    font-size: 2rem; 
+    margin-bottom: 20px; 
+    color: #333; 
+  }
+  
+  /* Style pour les messages d'erreur */
+  .auth-container p.error {
+    color: red;
+    margin-bottom: 20px;
+  }
+  
+  /* Style pour les formulaires */
+  .auth-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; 
+  }
+  
+  /* Style pour les champs de saisie */
+  .auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    font-size: 1rem; 
+  }
+  
+  /* Style pour le bouton de soumission */
+  .auth-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style pour le bouton au survol */
+  .auth-container button:hover {
+    background-color: #0056b3; 
+  }
+  
+  /* Conteneur pour les liens d'authentification */
+.auth-links {
+    margin-top: 20px;
+  }
+  
+  /* Style pour les liens d'authentification */
+  .auth-link {
+    color: #007bff;
+    text-decoration: none; 
+    font-weight: bold; 
+  }
+  
+  .auth-link:hover {
+    text-decoration: underline;
+  }
+  

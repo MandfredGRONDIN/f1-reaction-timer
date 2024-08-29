@@ -1,0 +1,47 @@
+/* Conteneur principal du composant Dashboard */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Style pour le titre */
+  .dashboard-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style pour le texte */
+  .dashboard-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style pour la liste des options */
+  .dashboard-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style pour les éléments de la liste */
+  .dashboard-container li {
+    margin: 10px 0;
+  }
+  
+  /* Style pour les liens */
+  .dashboard-container a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  /* Style pour les liens au survol */
+  .dashboard-container a:hover {
+    color: #0056b3;
+  }
+  

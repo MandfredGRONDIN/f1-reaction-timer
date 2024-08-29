@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import api from '../utils/api.js';
-import { useNavigate } from 'react-router-dom';
+import api from '../utils/api.jsx';
+import { useNavigate, Link } from 'react-router-dom';
+import '../styles/Auth.css';
 
 function Register() {
     const [email, setEmail] = useState('');
@@ -25,9 +26,9 @@ function Register() {
     };
 
     return (
-        <div>
+        <div className="auth-container">
             <h2>Register</h2>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {error && <p className="error">{error}</p>}
             <form onSubmit={handleSubmit}>
                 <input
                     type="email"
@@ -55,6 +56,10 @@ function Register() {
                 </div>
                 <button type="submit">Register</button>
             </form>
+            <div className="auth-links">
+                <p>Already have an account?</p>
+                <Link to="/login" className="auth-link">Login here</Link>
+            </div>
         </div>
     );
 }

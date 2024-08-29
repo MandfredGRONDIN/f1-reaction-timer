@@ -1,0 +1,46 @@
+/* Conteneur principal du composant Home */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; 
+  }
+  
+  /* Style pour le titre */
+  .home-container h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
+    color: #333;
+  }
+  
+  /* Style pour le paragraphe */
+  .home-container p {
+    font-size: 1.25rem; 
+    margin-bottom: 20px; 
+    color: #555; 
+  }
+  
+  /* Style pour la navigation */
+  nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  nav ul li {
+    margin: 10px 0; 
+  }
+  
+  nav a {
+    text-decoration: none; 
+    color: #007bff;
+    font-size: 1.25rem;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  

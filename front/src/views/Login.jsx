@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import api from '../utils/api.js';
-import { useNavigate } from 'react-router-dom';
+import api from '../utils/api.jsx';
+import { useNavigate, Link } from 'react-router-dom';
+import '../styles/Auth.css';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -25,9 +26,9 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="auth-container">
       <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="email"
@@ -45,6 +46,10 @@ function Login() {
         />
         <button type="submit">Login</button>
       </form>
+      <div className="auth-links">
+        <p>Don't have an account?</p>
+        <Link to="/register" className="auth-link">Register here</Link>
+      </div>
     </div>
   );
 }
