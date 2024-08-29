@@ -14,6 +14,7 @@ export const submitReactionTime = async (req, res) => {
       user_id: req.user.id,
       time,
     })
+    console.log(timer)
 
     await timer.save()
     res.json(timer)
