@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'
 
 const TimerSchema = new mongoose.Schema({
   user_id: {
@@ -14,8 +14,8 @@ const TimerSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-});
+})
 
-const Timer = mongoose.model('Timer', TimerSchema);
+const Timer = mongoose.model('Timer', TimerSchema)
 
-export default Timer;
+export default Timer
