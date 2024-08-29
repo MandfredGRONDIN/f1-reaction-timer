@@ -1,29 +1,33 @@
-import React, { useState } from 'react';
-import api from '../utils/api.jsx';
-import { useNavigate, Link } from 'react-router-dom';
-import '../styles/Auth.css';
+import React, { useState } from 'react'
+import api from '../utils/api.jsx'
+import { useNavigate, Link } from 'react-router-dom'
+import '../styles/Auth.css'
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState(null)
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      const response = await api.post('/login', { email, password });
-      localStorage.setItem('token', response.data.token);
-      navigate('/dashboard');
+      const response = await api.post('/login', { email, password })
+      localStorage.setItem('token', response.data.token)
+      navigate('/dashboard')
     } catch (error) {
-      if (error.response && error.response.data && error.response.data.message) {
-        setError(error.response.data.message);
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
+        setError(error.response.data.message)
       } else {
-        setError('Login error');
+        setError('Login error')
       }
-      console.error('Login error:', error);
+      console.error('Login error:', error)
     }
-  };
+  }
 
   return (
     <div className="auth-container">
@@ -48,10 +52,12 @@ function Login() {
       </form>
       <div className="auth-links">
         <p>Don't have an account?</p>
-        <Link to="/register" className="auth-link">Register here</Link>
+        <Link to="/register" className="auth-link">
+          Register here
+        </Link>
       </div>
     </div>
-  );
+  )
 }
 
-export default Login;
+export default Login
