@@ -8,9 +8,9 @@ function ReactionTimesList({ reactionTimes }) {
 
   return (
     <ul>
-      {reactionTimes.map((entry, index) => (
+      {reactionTimes.map((entry) => (
         <li
-          key={index}
+          key={entry.id}
           style={
             entry.time === bestTime
               ? { fontWeight: 'bold', color: 'green' }

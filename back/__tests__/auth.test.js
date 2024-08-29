@@ -1,49 +1,40 @@
-import request from 'supertest';
-import app from '../App.js';
-import User from '../src/models/User.js';
+import request from 'supertest'
+import app from '../App.js'
+import User from '../src/models/User.js'
 
 describe('User Authentication', () => {
-  let token;
-
   it('should register a new user', async () => {
-    const response = await request(app)
-      .post('/api/register')
-      .send({
-        email: 'testuser@example.com',
-        password: 'password123',
-        role: true
-      });
-      
-    expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty('token');
-    token = response.body.token; 
-  });
+    const response = await request(app).post('/api/register').send({
+      email: 'testuser@example.com',
+      password: 'password123',
+      role: true,
+    })
+
+    expect(response.status).toBe(200)
+    expect(response.body).toHaveProperty('token')
+  })
 
   it('should log in and return a token', async () => {
-    const response = await request(app)
-      .post('/api/login')
-      .send({
-        email: 'testuser@example.com',
-        password: 'password123'
-      });
-      
-    expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty('token');
-  });
+    const response = await request(app).post('/api/login').send({
+      email: 'testuser@example.com',
+      password: 'password123',
+    })
+
+    expect(response.status).toBe(200)
+    expect(response.body).toHaveProperty('token')
+  })
 
   it('should return an error for invalid credentials', async () => {
-    const response = await request(app)
-      .post('/api/login')
-      .send({
-        email: 'testuser@example.com',
-        password: 'wrongpassword'
-      });
-      
-    expect(response.status).toBe(400);
-    expect(response.body).toHaveProperty('message', 'Invalid credentials');
-  });
+    const response = await request(app).post('/api/login').send({
+      email: 'testuser@example.com',
+      password: 'wrongpassword',
+    })
+
+    expect(response.status).toBe(400)
+    expect(response.body).toHaveProperty('message', 'Invalid credentials')
+  })
 
   afterAll(async () => {
-    await User.deleteMany({}); 
-  });
-});
+    await User.deleteMany({})
+  })
+})

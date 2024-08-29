@@ -16,15 +16,7 @@ function Register() {
       await api.post('/register', { email, password, role })
       navigate('/')
     } catch (error) {
-      if (
-        error.response &&
-        error.response.data &&
-        error.response.data.message
-      ) {
-        setError(error.response.data.message)
-      } else {
-        setError('Registration error')
-      }
+      setError(error?.response?.data?.message ?? 'Registration error')
       console.error('Registration error:', error)
     }
   }

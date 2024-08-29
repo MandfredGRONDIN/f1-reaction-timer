@@ -16,15 +16,7 @@ function Login() {
       localStorage.setItem('token', response.data.token)
       navigate('/dashboard')
     } catch (error) {
-      if (
-        error.response &&
-        error.response.data &&
-        error.response.data.message
-      ) {
-        setError(error.response.data.message)
-      } else {
-        setError('Login error')
-      }
+      setError(error?.response?.data?.message ?? 'Login error')
       console.error('Login error:', error)
     }
   }
