@@ -36,7 +36,7 @@ jobs:
       - name: Run tests
         working-directory: ./back
         env:
-          MONGODB_URI: mongodb://localhost:27017/f1reactiontimer
-          PORT: 5001
-          JWT_SECRET: ceciestunsecret
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          PORT: ${{ secrets.PORT }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: npm test
