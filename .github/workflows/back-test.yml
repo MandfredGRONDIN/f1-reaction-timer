@@ -37,6 +37,6 @@ jobs:
         working-directory: ./back
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
-          PORT: ${{ secrets.PORT }}
+          BACKEND_PORT: ${{ secrets.BACKEND_PORT }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: npm test

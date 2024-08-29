@@ -5,11 +5,9 @@ services:
     build:
       context: ./back
     ports:
-      - "5001:5001"
-    environment:
-      - PORT=5001
-      - MONGODB_URI=mongodb://mongo:27017/f1reactiontimer
-      - JWT_SECRET=ceciestunsecret
+      - "${BACKEND_PORT}:${BACKEND_PORT}" 
+    env_file:
+      - .env
     depends_on:
       - mongo
 
@@ -17,14 +15,14 @@ services:
     build:
       context: ./front
     ports:
-      - "3000:3000"
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}" 
     depends_on:
       - backend
 
   mongo:
     image: mongo:latest
     ports:
-      - "27017:27017"
+      - "${MONGO_PORT}:${MONGO_PORT}" 
     volumes:
       - mongo-data:/data/db
 
