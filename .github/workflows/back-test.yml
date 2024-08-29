@@ -12,7 +12,7 @@ jobs:
 
     services:
       mongodb:
-        image: mongo:8.5.4
+        image: mongo:8.0
         ports:
           - 27017:27017
         options: --health-cmd "mongo --eval 'db.runCommand(\"ping\")' --quiet" --health-interval 10s --health-timeout 5s --health-retries 3
@@ -31,7 +31,7 @@ jobs:
         run: npm install
 
       - name: Display MongoDB logs
-        run: docker logs $(docker ps -q --filter "ancestor=mongo:8.5.4")
+        run: docker logs $(docker ps -q --filter "ancestor=mongo:8.0")
 
       - name: Run tests
         working-directory: ./back
